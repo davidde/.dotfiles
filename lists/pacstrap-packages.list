@@ -1,0 +1,17 @@
+base
+base-devel
+btrfs-progs
+dosfstools
+exfatprogs
+git
+intel-ucode
+linux-lts
+linux-lts-headers
+linux-zen
+linux-zen-headers
+linux-firmware
+man-pages
+man-db
+nvme-cli
+vim
+zsh

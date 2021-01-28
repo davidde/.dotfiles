@@ -1,0 +1,15 @@
+[user]
+  name = David Deprost
+  email = dadeprost@gmail.com
+
+[core]
+  editor = nvim
+
+[pull]
+  ff = only
+  
+[init]
+  defaultBranch = master
+
+#[submodule]
+#  recurse = true

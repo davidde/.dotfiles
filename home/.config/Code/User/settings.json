@@ -1,0 +1,97 @@
+{ // File Location: `~/.config/Code/User/settings.json`
+
+/// EDITOR SETTINGS ///
+  "editor.fontFamily": "'Droid Sans Mono', 'Fira Mono', Cousine, monospace",
+  "editor.fontSize": 14,
+  "editor.lineHeight": 24,
+  // Controls how the editor should render whitespace characters:
+  // possibilities are 'none', 'boundary' or 'all'.
+  // The 'boundary' option does not render single spaces between words.
+  "editor.renderWhitespace": "boundary",
+  // Controls whether `editor.tabSize#` and `#editor.insertSpaces` will be
+  // automatically detected from the opened file contents:
+  // * It is true by default, and overrides `editor.insertSpaces` and `editor.tabSize`.
+  //   This is to respect the existing formatting of the file, without mixing tabs and spaces.
+  // * Set it to false if you want every opened file to have the preconfigured `editor.tabSize`
+  //   and `editor.insertSpaces`, regardless of the existing formatting that was detected.
+  "editor.detectIndentation": false,
+  // Tab size in spaces:
+  "editor.tabSize": 2,
+  "[python]": {
+    "editor.tabSize": 4,
+  },
+  "editor.wrappingIndent": "indent",
+  // Syntax highlighting customizations:
+  "editor.tokenColorCustomizations": {
+  // To find the right token names to customize:
+  // CTRL+Shift+P: > Developer: Inspect Editor Tokens and Scopes
+  // Then click the element you want info about
+    "[Visual Studio Dark]": {
+      "comments": "#777777",
+    }
+  },
+
+/// VIM EXTENSION SETTINGS ///
+  "vim.startInInsertMode": true,
+  "vim.useSystemClipboard": true,
+  "vim.leader": "<space>",
+  "vim.easymotion": true,
+  "vim.insertModeKeyBindings": [
+    { // Bind "jj" to "Esc" while in insert mode:
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    "<C-c>": false,
+    "<C-v>": false,
+    "<C-x>": false,
+    "<C-w>": false,
+  },
+
+/// FILE EXPLORER SETTINGS ///
+  // Controls if the file explorer should ask for confirmation
+  // to move files and folders via drag and drop:
+  "explorer.confirmDragAndDrop": false,
+
+/// WINDOW SETTINGS ///
+  // Controls the dimensions of a newly opened window:
+  // possibilities are 'default', 'inherit', 'maximized' or 'fullscreen'.
+  "window.newWindowDimensions": "maximized",
+  // Adjust the zoom level of the window. The original size is 0,
+  // and each increment above (e.g. 1) or below (e.g. -1) represents
+  // zooming 20% larger or smaller. You can also enter decimals to
+  // adjust the zoom level with finer granularity:
+  "window.zoomLevel": 1,
+  // Toggle menu bar visibility with `Alt`:
+  "window.menuBarVisibility": "toggle",
+
+/// WORKBENCH SETTINGS ///
+// ("Workbench" refers to the overall Visual Studio Code UI)
+  "workbench.colorTheme": "Visual Studio Dark",
+  // On Arch, the default styles for "Visual Studio Dark" are found at:
+  // /opt/visual-studio-code/resources/app/extensions/theme-defaults/themes/dark_vs.json
+  "workbench.colorCustomizations": {
+    "[Visual Studio Dark]": {
+      "activityBar.background": "#1c1c1c",
+      "sideBar.background": "#101112",
+      "sideBar.foreground": "#aaaaaa",
+      "editor.background": "#000000",
+      "editor.foreground": "#cccccc",
+      "editorWhitespace.foreground": "#444444",
+      "tab.inactiveBackground": "#221d20",
+      "tab.activeBackground": "#0b0c0b",
+    }
+  },
+  // Integrated terminal placement:
+  "workbench.panel.defaultLocation": "right",
+  "workbench.statusBar.visible": true,
+  "workbench.activityBar.visible": true,
+
+/// OTHER ///
+  // Show path to file below opened tabs:
+  "breadcrumbs.enabled": true,
+  "hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWxcIixcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltdLFwiZm9ybWF0V2lkdGhcIjoyNDAsXCJjcmVhdGVUYXJnZXRcIjpmYWxzZSxcInBhZ2VGb3JtYXRcIjp7XCJ4XCI6MCxcInlcIjowLFwid2lkdGhcIjo2MDAsXCJoZWlnaHRcIjo2MDB9LFwic2VhcmNoXCI6dHJ1ZSxcInNob3dTdGFydFNjcmVlblwiOnRydWUsXCJncmlkQ29sb3JcIjpcIiNkMGQwZDBcIixcImRhcmtHcmlkQ29sb3JcIjpcIiM2ZTZlNmVcIixcImF1dG9zYXZlXCI6dHJ1ZSxcInJlc2l6ZUltYWdlc1wiOm51bGwsXCJvcGVuQ291bnRlclwiOjAsXCJ2ZXJzaW9uXCI6MTgsXCJ1bml0XCI6MSxcImlzUnVsZXJPblwiOmZhbHNlLFwidWlcIjpcIlwifSJ9",
+}
