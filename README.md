@@ -65,7 +65,7 @@ Etc.
 ### .dotfiles/scripts/
 Executable scripts. Do not forget to, you know, make them executable:
 ```
-chmod u+x /home/david/.dotfiles/scripts/whatever
+chmod u+x /home/david/.dotfiles/scripts/*
 ```
 
 Also, for the aliases to work, you'll need to add the `scripts` directory to your path.
