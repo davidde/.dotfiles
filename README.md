@@ -13,7 +13,8 @@ ln -vs ~/.dotfiles/home/.config/Code/User/settings.json ~/.config/Code/User/
 ```
 
 ### .dotfiles/lists/
-Plain text lists for automation purposes. One entry per line.
+Plain text lists for automation purposes. One entry per line.  
+&nbsp;
 
 <details>
 <summary><b>VScode extensions</b></summary>
@@ -60,8 +61,6 @@ Plain text lists for automation purposes. One entry per line.
 </details>
 &nbsp;
 
-Etc.
-
 ### .dotfiles/scripts/
 Executable scripts. Do not forget to, you know, make them executable:
 ```
@@ -87,28 +86,33 @@ Also, for the aliases to work, you'll need to add the `scripts` directory to you
 * `~/.config/`:
   ```bash
   # VScode:
-  ln -vsf ~/.dotfiles/home/.config/Code/User/settings.json ~/.config/Code/User
+  ln -vsf ~/.dotfiles/home/.config/Code/User/settings.json ~/.config/Code/User/
 
   # MPV scripts and configs:
-  ln -vsf ~/.dotfiles/home/.config/mpv/scripts/autosub/autosub.lua ~/.config/mpv/scripts
-  ln -vsf ~/.dotfiles/home/.config/mpv/input.conf ~/.config/mpv
-  ln -vsf ~/.dotfiles/home/.config/mpv/mpv.conf ~/.config/mpv
+  ln -vsf ~/.dotfiles/home/.config/mpv/scripts/autosub/autosub.lua ~/.config/mpv/scripts/
+  ln -vsf ~/.dotfiles/home/.config/mpv/input.conf ~/.config/mpv/
+  ln -vsf ~/.dotfiles/home/.config/mpv/mpv.conf ~/.config/mpv/
 
   # NeoVIM:
-  ln -vsf ~/.dotfiles/home/.config/nvim/init.vim ~/.config/nvim
+  ln -vsf ~/.dotfiles/home/.config/nvim/init.vim ~/.config/nvim/
 
   # Tridactyl Firefox addon:
-  ln -vsf ~/.dotfiles/home/.config/tridactyl/tridactylrc ~/.config/tridactyl
+  ln -vsf ~/.dotfiles/home/.config/tridactyl/tridactylrc ~/.config/tridactyl/
 
   # Home "User directories" customizations:
-  ln -vsf ~/.dotfiles/home/.config/user-dirs.dirs ~/.config
+  ln -vsf ~/.dotfiles/home/.config/user-dirs.dirs ~/.config/
+  ```
+
+* `~/.gnupg/`:
+  ```bash
+  ln -vsf ~/.dotfiles/home/.gnupg/gpg-agent.conf ~/.gnupg/
   ```
 
 * `~/.oh-my-zsh/`:
   ```bash
-  ln -vsf ~/.dotfiles/home/.oh-my-zsh/custom/base.zsh ~/.oh-my-zsh/custom
-  ln -vsf ~/.dotfiles/home/.oh-my-zsh/custom/gpg.zsh ~/.oh-my-zsh/custom
-  ln -vsf ~/.dotfiles/home/.oh-my-zsh/custom/plugins/git ~/.oh-my-zsh/custom/plugins
+  ln -vsf ~/.dotfiles/home/.oh-my-zsh/custom/base.zsh ~/.oh-my-zsh/custom/
+  ln -vsf ~/.dotfiles/home/.oh-my-zsh/custom/gpg.zsh ~/.oh-my-zsh/custom/
+  ln -vsf ~/.dotfiles/home/.oh-my-zsh/custom/plugins/git ~/.oh-my-zsh/custom/plugins/
   ```
 
 Note that the `-f, --force` flag will remove existing files, so if you're not on a brand new system, make sure important files are moved to safety first. Also, on a new system some of these directories will still have to be created.
