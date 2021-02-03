@@ -36,7 +36,8 @@ alias bs='btrfs_snapshot'
 alias calibu='calibre_backup /storage/backup/backup/calibre'
 
 alias difstr='diff_string'
-alias dot='code -n ~/.dotfiles'
+alias dot='~/.dotfiles/submodules/dotcon/dotcon/dotcon.py'
+alias dotfiles='code -n ~/.dotfiles'
 
 alias ffcv=' ffmpeg_convert.zsh'
 alias fnd='find_file'
