@@ -5,7 +5,7 @@ This repo holds my personal dotfiles for my own convenience. Feel free to pick a
 ### .dotfiles/home/
 The actual dotfiles are in the `home` directory, in the exact same path they would be in the local home directory. This is mostly for convenience; easier symlinking and keeping other files apart.
 
-With this structure symlinking is very straightforward, as well as easy to automate (see [dotcon](submodules/dotcon/README.md)). Simply find the file in `~/.dotfiles/home/`, and link against the same path with `.dotfiles/home/` removed. For example:
+With this structure symlinking is very straightforward, as well as easy to automate (see [dotcon](https://github.com/davidde/dotcon)). To symlink manually, simply find the file in `~/.dotfiles/home/`, and link against the same path with `.dotfiles/home/` removed. For example:
 ```bash
 # ln -vs <source> <destination>
 ln -vs ~/.dotfiles/home/.zshrc ~
@@ -82,7 +82,7 @@ git submodule add git@github.com:davidde/mpv-autosub.git submodules/autosub
 
 git submodule add git@github.com:davidde/dotcon.git submodules/dotcon
 ```
-The [dotcon submodule](submodules/dotcon/README.md) is the dotfile manager that is used for autogenerating the symlinks. Its repo is [here](https://github.com/davidde/dotcon).
+[Dotcon](https://github.com/davidde/dotcon) is the dotfile manager that is used for autogenerating the symlinks.
 
 ## Overview of symlinks
 * `~`:
