@@ -1,6 +1,6 @@
-[submodule "home/.oh-my-zsh/custom/plugins/git"]
-	path = home/.oh-my-zsh/custom/plugins/git
+[submodule "submodules/git"]
+	path = submodules/git
 	url = git@github.com:davidde/git.git
-[submodule "home/.config/mpv/scripts/autosub"]
-	path = home/.config/mpv/scripts/autosub
+[submodule "submodules/autosub"]
+	path = submodules/autosub
 	url = git@github.com:davidde/mpv-autosub.git

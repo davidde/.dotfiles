@@ -80,7 +80,7 @@ Also, for the aliases to work, you'll need to add the `scripts` directory to you
 
   # Templates directory:
   rm ~/Templates
-  ln -vsf ~/.dotfiles/home/Templates ~
+  ln -vsf ~/.dotfiles/home/Templates/ ~
   ```
 
 * `~/.config/`:
@@ -89,7 +89,7 @@ Also, for the aliases to work, you'll need to add the `scripts` directory to you
   ln -vsf ~/.dotfiles/home/.config/Code/User/settings.json ~/.config/Code/User/
 
   # MPV scripts and configs:
-  ln -vsf ~/.dotfiles/home/.config/mpv/scripts/autosub/autosub.lua ~/.config/mpv/scripts/
+  ln -vsf ~/.dotfiles/home/.config/mpv/scripts/autosub.lua ~/.config/mpv/scripts/
   ln -vsf ~/.dotfiles/home/.config/mpv/input.conf ~/.config/mpv/
   ln -vsf ~/.dotfiles/home/.config/mpv/mpv.conf ~/.config/mpv/
 
@@ -112,13 +112,17 @@ Also, for the aliases to work, you'll need to add the `scripts` directory to you
   ```bash
   ln -vsf ~/.dotfiles/home/.oh-my-zsh/custom/base.zsh ~/.oh-my-zsh/custom/
   ln -vsf ~/.dotfiles/home/.oh-my-zsh/custom/gpg.zsh ~/.oh-my-zsh/custom/
-  ln -vsf ~/.dotfiles/home/.oh-my-zsh/custom/plugins/git ~/.oh-my-zsh/custom/plugins/
+  ln -vsf ~/.dotfiles/home/.oh-my-zsh/custom/plugins/git/ ~/.oh-my-zsh/custom/plugins/
   ```
 
 Note that the `-f, --force` flag will remove existing files, so if you're not on a brand new system, make sure important files are moved to safety first. Also, on a new system some of these directories will still have to be created.
 
 ## Overview of submodules
-```
-git submodule add git@github.com:davidde/git.git home/.oh-my-zsh/custom/plugins/git
-git submodule add git@github.com:davidde/mpv-autosub.git home/.config/mpv/scripts/autosub
+```bash
+git submodule add git@github.com:davidde/git.git submodules/git
+# ln -vs ~/.dotfiles/submodules/git/ ~/.dotfiles/home/.oh-my-zsh/custom/plugins/
+
+git submodule add git@github.com:davidde/mpv-autosub.git submodules/autosub
+# ln -vs ~/.dotfiles/submodules/autosub/autosub.lua ~/.dotfiles/home/.config/mpv/scripts/
+
 ```
