@@ -4,3 +4,6 @@
 [submodule "submodules/autosub"]
 	path = submodules/autosub
 	url = git@github.com:davidde/mpv-autosub.git
+[submodule "submodules/dotcon"]
+	path = submodules/dotcon
+	url = git@github.com:davidde/dotcon.git

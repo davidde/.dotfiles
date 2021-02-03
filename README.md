@@ -5,7 +5,7 @@ This repo holds my personal dotfiles for my own convenience. Feel free to pick a
 ### .dotfiles/home/
 The actual dotfiles are in the `home` directory, in the exact same path they would be in the local home directory. This is mostly for convenience; easier symlinking and keeping other files apart.
 
-With this structure symlinking is very straightforward, as well as easy to automate (see dotty). Simply find the file in `~/.dotfiles/home/`, and link against the same path with `.dotfiles/home/` removed. For example:
+With this structure symlinking is very straightforward, as well as easy to automate (see [dotcon](submodules/dotcon/README.md)). Simply find the file in `~/.dotfiles/home/`, and link against the same path with `.dotfiles/home/` removed. For example:
 ```bash
 # ln -vs <source> <destination>
 ln -vs ~/.dotfiles/home/.zshrc ~
@@ -51,12 +51,12 @@ Plain text lists for automation purposes. One entry per line.
 
 * Install brew packages from a list:
   ```
-  xargs brew install < brew-packages.list
+  xargs brew install < ~/.dotfiles/lists/brew-packages.list
   ```
 
 * Install brew cask (GUI) packages from a list:
   ```
-  xargs brew install --cask < brew-cask-packages.list
+  xargs brew install --cask < ~/.dotfiles/lists/brew-cask-packages.list
   ```
 </details>
 &nbsp;
@@ -64,11 +64,25 @@ Plain text lists for automation purposes. One entry per line.
 ### .dotfiles/scripts/
 Executable scripts. Do not forget to, you know, make them executable:
 ```
-chmod u+x /home/david/.dotfiles/scripts/*
+chmod u+x ~/.dotfiles/scripts/*
 ```
 
 Also, for the aliases to work, you'll need to add the `scripts` directory to your path.
 (In this repo that is done with the `path_append` function in zshrc.)
+
+### .dotfiles/submodules/
+All submodules conveniently in one place.  
+Overview of current submodules:
+```bash
+git submodule add git@github.com:davidde/git.git submodules/git
+# ln -vs ~/.dotfiles/submodules/git/ ~/.dotfiles/home/.oh-my-zsh/custom/plugins/
+
+git submodule add git@github.com:davidde/mpv-autosub.git submodules/autosub
+# ln -vs ~/.dotfiles/submodules/autosub/autosub.lua ~/.dotfiles/home/.config/mpv/scripts/
+
+git submodule add git@github.com:davidde/dotcon.git submodules/dotcon
+```
+The [dotcon submodule](submodules/dotcon/README.md) is the dotfile manager that is used for autogenerating the symlinks. Its repo is [here](https://github.com/davidde/dotcon).
 
 ## Overview of symlinks
 * `~`:
@@ -116,13 +130,3 @@ Also, for the aliases to work, you'll need to add the `scripts` directory to you
   ```
 
 Note that the `-f, --force` flag will remove existing files, so if you're not on a brand new system, make sure important files are moved to safety first. Also, on a new system some of these directories will still have to be created.
-
-## Overview of submodules
-```bash
-git submodule add git@github.com:davidde/git.git submodules/git
-# ln -vs ~/.dotfiles/submodules/git/ ~/.dotfiles/home/.oh-my-zsh/custom/plugins/
-
-git submodule add git@github.com:davidde/mpv-autosub.git submodules/autosub
-# ln -vs ~/.dotfiles/submodules/autosub/autosub.lua ~/.dotfiles/home/.config/mpv/scripts/
-
-```
