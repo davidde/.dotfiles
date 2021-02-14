@@ -36,7 +36,8 @@ function prepend() {
 if [[ $# -ne 1 ]]; then
   echo "Usage: unlock <mapper-name>\n"
   echo "Requires up-to-date crypttab and fstab."
-  echo "Will use key file '$LUKS_KEYFILE', but prompt for password if incorrect."
+  echo "Will use the appropriate key file from crypttab,
+or prompt for password if not present."
   return 1 # Incorrect arg number
 fi
 

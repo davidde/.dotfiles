@@ -15,7 +15,7 @@ alias cprd='rsync -ha --delete --info=progress2 --exclude={".Trash*",lost+found,
 # and will be much faster at diffing large directories since it stores
 # the diffs locally in `~/.unison`:
 alias cpu='unison -auto'  # Usage: `unison /src /dest`
-alias cpufat='unison -auto -fat' # To prevent errors on fat/exfat file systems!
+alias cpufat='unison -auto -fat' # To prevent errors when copying to fat/exfat file systems!
 # Note that unison will by default also propagate changes in /dest back to /src,
 # since it is a 2 way sync tool. If this is not desired,
 # specify `-force /path/to/src-or-dest`, which effectively results in a 1 way sync
